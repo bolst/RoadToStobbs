@@ -1,1 +1,102 @@
 ﻿@page "/"
+@using RoadToStobbs.Components
+@using RoadToStobbs.Api
+
+<Row>
+    @if (matchups != null)
+    {
+        const int MAX_ROUNDS = 6;
+        int currentRound = matchups.Count();
+
+        foreach (Data.Matchups round in matchups)
+        {
+            <Column ColumnSize="ColumnSize.Is2">
+                <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                    @foreach (Data.Matchup matchup in round.matchups)
+                    {
+                        var _matchup = matchup;
+                        <Matchup Data="@_matchup" />
+                    }
+                </Div>
+            </Column>
+        }
+
+        for (int i = currentRound; i <= MAX_ROUNDS - currentRound; i++)
+        {
+            var my_i = i;
+            if (my_i == 1) continue;
+
+            <Column ColumnSize="ColumnSize.Is2">
+                <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                    @for (int j = 0; j < Math.Pow(2, MAX_ROUNDS - my_i); j++)
+                    {
+                        string idx = j.ToString();
+                        <Matchup Text="@idx" />
+                    }
+                </Div>
+            </Column>
+        }
+    }
+@*
+    <Column ColumnSize="ColumnSize.Is2">
+        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+            @for (int i = 0; i < 16; i++)
+            {
+                string idx = i.ToString();
+                <Matchup Text="@idx" />
+            }
+        </Div>
+    </Column>
+    <Column ColumnSize="ColumnSize.Is2">
+        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+            @for (int i = 0; i < 8; i++)
+            {
+                string idx = i.ToString();
+                <Matchup Text="@idx" />
+            }
+        </Div>
+    </Column>
+    <Column ColumnSize="ColumnSize.Is2">
+        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+            @for (int i = 0; i < 4; i++)
+            {
+                string idx = i.ToString();
+                <Matchup Text="@idx" />
+            }
+        </Div>
+    </Column>
+    <Column ColumnSize="ColumnSize.Is2">
+        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+            @for (int i = 0; i < 2; i++)
+            {
+                string idx = i.ToString();
+                <Matchup Text="@idx" />
+            }
+        </Div>
+    </Column>
+    <Column ColumnSize="ColumnSize.Is2">
+        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+            @for (int i = 0; i < 1; i++)
+            {
+                string idx = i.ToString();
+                <Matchup Text="@idx" />
+            }
+        </Div>
+    </Column>*@
+</Row>
+
+@code {
+
+    private List<Data.Matchups>? matchups { get; set; } = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(1);
+    }
+
+    protected override void OnInitialized()
+    {
+        matchups = Matchups.Instance().GetMatchups();
+        base.OnInitialized();
+    }
+}

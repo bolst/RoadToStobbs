@@ -43,3 +43,5 @@
 /Users/nic/git/RoadToStobbs/RoadToStobbs/obj/Debug/net6.0/RoadToStobbs.pdb
 /Users/nic/git/RoadToStobbs/RoadToStobbs/obj/Debug/net6.0/RoadToStobbs.genruntimeconfig.cache
 /Users/nic/git/RoadToStobbs/RoadToStobbs/obj/Debug/net6.0/ref/RoadToStobbs.dll
+/Users/nic/git/RoadToStobbs/RoadToStobbs/bin/Debug/net6.0/Api/matchups.json
+/Users/nic/git/RoadToStobbs/RoadToStobbs/bin/Debug/net6.0/Api/team_data.json

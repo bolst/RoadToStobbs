@@ -13,6 +13,250 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/AllistonHornets.png",
+      "PackagePath": "staticwebassets/logos/AllistonHornets.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/AmherstburgAdmirals.png",
+      "PackagePath": "staticwebassets/logos/AmherstburgAdmirals.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/AmherstviewJets.png",
+      "PackagePath": "staticwebassets/logos/AmherstviewJets.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/AylmerSpitfires.png",
+      "PackagePath": "staticwebassets/logos/AylmerSpitfires.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/BlenheimBlades.png",
+      "PackagePath": "staticwebassets/logos/BlenheimBlades.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/CaledonGoldenHawks.png",
+      "PackagePath": "staticwebassets/logos/CaledonGoldenHawks.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/CampbellfordRebels.png",
+      "PackagePath": "staticwebassets/logos/CampbellfordRebels.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/ClaringtonEagles.png",
+      "PackagePath": "staticwebassets/logos/ClaringtonEagles.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/DorchesterDolphins.png",
+      "PackagePath": "staticwebassets/logos/DorchesterDolphins.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/DresdenKings.png",
+      "PackagePath": "staticwebassets/logos/DresdenKings.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/DundasBlues.png",
+      "PackagePath": "staticwebassets/logos/DundasBlues.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/DunnvilleMudcats.png",
+      "PackagePath": "staticwebassets/logos/DunnvilleMudcats.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/Essex73s.png",
+      "PackagePath": "staticwebassets/logos/Essex73s.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/ExeterHawks.png",
+      "PackagePath": "staticwebassets/logos/ExeterHawks.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/FergusWhalers.png",
+      "PackagePath": "staticwebassets/logos/FergusWhalers.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/FrankfordHuskies.png",
+      "PackagePath": "staticwebassets/logos/FrankfordHuskies.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/GeorginaIce.png",
+      "PackagePath": "staticwebassets/logos/GeorginaIce.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/GlanbrookRangers.png",
+      "PackagePath": "staticwebassets/logos/GlanbrookRangers.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/GoderichFlyers.png",
+      "PackagePath": "staticwebassets/logos/GoderichFlyers.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/GrimsbyPeachKings.png",
+      "PackagePath": "staticwebassets/logos/GrimsbyPeachKings.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/HagersvilleHawks.png",
+      "PackagePath": "staticwebassets/logos/HagersvilleHawks.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/HanoverBarons.png",
+      "PackagePath": "staticwebassets/logos/HanoverBarons.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/HespelerShamrocks.png",
+      "PackagePath": "staticwebassets/logos/HespelerShamrocks.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/HuntsvilleOtters.png",
+      "PackagePath": "staticwebassets/logos/HuntsvilleOtters.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/InnisfilSpartans.png",
+      "PackagePath": "staticwebassets/logos/InnisfilSpartans.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/KincardineBulldogs.png",
+      "PackagePath": "staticwebassets/logos/KincardineBulldogs.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/LakefieldChiefs.png",
+      "PackagePath": "staticwebassets/logos/LakefieldChiefs.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/LakeshoreCanadiens.png",
+      "PackagePath": "staticwebassets/logos/LakeshoreCanadiens.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/LittleBritainMerchants.png",
+      "PackagePath": "staticwebassets/logos/LittleBritainMerchants.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/LucanIrish.png",
+      "PackagePath": "staticwebassets/logos/LucanIrish.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/MidlandFlyers.png",
+      "PackagePath": "staticwebassets/logos/MidlandFlyers.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/MitchellHawks.png",
+      "PackagePath": "staticwebassets/logos/MitchellHawks.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/MooretownFlags.png",
+      "PackagePath": "staticwebassets/logos/MooretownFlags.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/MountForestPatriots.png",
+      "PackagePath": "staticwebassets/logos/MountForestPatriots.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/Mt.BrydgesBulldogs.png",
+      "PackagePath": "staticwebassets/logos/Mt.BrydgesBulldogs.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/NapaneeRaiders.png",
+      "PackagePath": "staticwebassets/logos/NapaneeRaiders.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/NewHamburgFirebirds.png",
+      "PackagePath": "staticwebassets/logos/NewHamburgFirebirds.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/NiagaraRiverHawks.png",
+      "PackagePath": "staticwebassets/logos/NiagaraRiverHawks.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/NorthKawarthaKnights.png",
+      "PackagePath": "staticwebassets/logos/NorthKawarthaKnights.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/NorthMiddlesexStars.png",
+      "PackagePath": "staticwebassets/logos/NorthMiddlesexStars.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/NorwichMerchants.png",
+      "PackagePath": "staticwebassets/logos/NorwichMerchants.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/OrilliaTerriers.png",
+      "PackagePath": "staticwebassets/logos/OrilliaTerriers.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/ParisTitans.png",
+      "PackagePath": "staticwebassets/logos/ParisTitans.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/PenetangKings.png",
+      "PackagePath": "staticwebassets/logos/PenetangKings.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/PetroliaFlyers.png",
+      "PackagePath": "staticwebassets/logos/PetroliaFlyers.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/PictonPirates.png",
+      "PackagePath": "staticwebassets/logos/PictonPirates.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/PortDoverSailors.png",
+      "PackagePath": "staticwebassets/logos/PortDoverSailors.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/PortHopePanthers.png",
+      "PackagePath": "staticwebassets/logos/PortHopePanthers.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/PortPerryLumberjacks.png",
+      "PackagePath": "staticwebassets/logos/PortPerryLumberjacks.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/PortStanleySailors.png",
+      "PackagePath": "staticwebassets/logos/PortStanleySailors.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/SchombergCougars.png",
+      "PackagePath": "staticwebassets/logos/SchombergCougars.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/StaynerSiskins.png",
+      "PackagePath": "staticwebassets/logos/StaynerSiskins.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/TavistockBraves.png",
+      "PackagePath": "staticwebassets/logos/TavistockBraves.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/ThamesfordTrojans.png",
+      "PackagePath": "staticwebassets/logos/ThamesfordTrojans.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/UxbridgeBruins.png",
+      "PackagePath": "staticwebassets/logos/UxbridgeBruins.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/WalkertonCapitals.png",
+      "PackagePath": "staticwebassets/logos/WalkertonCapitals.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/WalpoleIslandWild.png",
+      "PackagePath": "staticwebassets/logos/WalpoleIslandWild.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/WellesleyApplejacks.png",
+      "PackagePath": "staticwebassets/logos/WellesleyApplejacks.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/WheatleyOmsteadSharks.png",
+      "PackagePath": "staticwebassets/logos/WheatleyOmsteadSharks.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/WinghamIronmen.png",
+      "PackagePath": "staticwebassets/logos/WinghamIronmen.png"
+    },
+    {
+      "Id": "/Users/nic/git/RoadToStobbs/RoadToStobbs/wwwroot/logos/WoodstockNavyVets.png",
+      "PackagePath": "staticwebassets/logos/WoodstockNavyVets.png"
+    },
+    {
       "Id": "obj/Debug/net6.0/staticwebassets/msbuild.RoadToStobbs.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
