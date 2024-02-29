@@ -10,7 +10,7 @@
 
         foreach (Data.Matchups round in matchups)
         {
-            <Column ColumnSize="ColumnSize.Is2">
+            <Column>
                 <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
                     @foreach (Data.Matchup matchup in round.matchups)
                     {
@@ -21,68 +21,28 @@
             </Column>
         }
 
-        for (int i = currentRound; i <= MAX_ROUNDS - currentRound; i++)
+        for (int i = currentRound; i <= MAX_ROUNDS - currentRound + 1; i++)
         {
-            var my_i = i;
-            if (my_i == 1) continue;
+            var i0 = i;
+            if (i0 == 1) continue;
 
-            <Column ColumnSize="ColumnSize.Is2">
+            <Column>
                 <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                    @for (int j = 0; j < Math.Pow(2, MAX_ROUNDS - my_i); j++)
+                    @for (int j = 0; j < Math.Pow(2, MAX_ROUNDS - i0); j++)
                     {
                         string idx = j.ToString();
-                        <Matchup Text="@idx" />
+                        <Matchup />
                     }
                 </Div>
             </Column>
         }
+
+        <Column>
+            <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                <Image Source="logos/playoffs.png" Width="Width.Is100" />
+            </Div>
+        </Column>
     }
-@*
-    <Column ColumnSize="ColumnSize.Is2">
-        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-            @for (int i = 0; i < 16; i++)
-            {
-                string idx = i.ToString();
-                <Matchup Text="@idx" />
-            }
-        </Div>
-    </Column>
-    <Column ColumnSize="ColumnSize.Is2">
-        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-            @for (int i = 0; i < 8; i++)
-            {
-                string idx = i.ToString();
-                <Matchup Text="@idx" />
-            }
-        </Div>
-    </Column>
-    <Column ColumnSize="ColumnSize.Is2">
-        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-            @for (int i = 0; i < 4; i++)
-            {
-                string idx = i.ToString();
-                <Matchup Text="@idx" />
-            }
-        </Div>
-    </Column>
-    <Column ColumnSize="ColumnSize.Is2">
-        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-            @for (int i = 0; i < 2; i++)
-            {
-                string idx = i.ToString();
-                <Matchup Text="@idx" />
-            }
-        </Div>
-    </Column>
-    <Column ColumnSize="ColumnSize.Is2">
-        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-            @for (int i = 0; i < 1; i++)
-            {
-                string idx = i.ToString();
-                <Matchup Text="@idx" />
-            }
-        </Div>
-    </Column>*@
 </Row>
 
 @code {

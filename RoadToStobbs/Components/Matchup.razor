@@ -1,55 +1,82 @@
 @namespace RoadToStobbs.Components
 
-<Card>
-    <CardBody>
-        <Row RowColumns="RowColumns.Are3">
-            @if (Data != null)
-            {
-                <Column>
-                    <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                        <Figure Size="FigureSize.Is32x32">
-                            @{
-                                string team_name = Api.Teams.Instance().TeamIdNameMap[Data.team1];
-                                string team_name_stripped = new string(team_name.ToCharArray().Where(c =>
-                                !Char.IsWhiteSpace(c)).ToArray());
-                                string path = $"logos/{team_name_stripped}.png";
-                                <FigureImage Source="@path" />
-                            }
-                        </Figure>
-                    </Div>
-                </Column>
-                <Column>
-                    <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                        <Text>@Data.team1_wins : @Data.team2_wins</Text>
-                    </Div>
-                </Column>
-                <Column>
-                    <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                        <Figure Size="FigureSize.Is32x32">
-                            @{
-                                string team_name = Api.Teams.Instance().TeamIdNameMap[Data.team2];
-                                string team_name_stripped = new string(team_name.ToCharArray().Where(c =>
-                                !Char.IsWhiteSpace(c)).ToArray());
-                                string path = $"logos/{team_name_stripped}.png";
-                                <FigureImage Source="@path" />
-                            }
-                        </Figure>
-                    </Div>
-                </Column>
-            }
-        </Row>
-    </CardBody>
-</Card>
+<div @onclick="@(e => DisplayGameStats())" style="cursor: pointer">
+    <Card>
+        <CardBody>
+            <Row RowColumns="RowColumns.Are3">
+                @if (Data != null)
+                {
+                    <Column TextAlignment="TextAlignment.Center">
+                        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                            <Figure Size="FigureSize.Is48x48">
+                                @{
+                                    string team_name = Api.Teams.Instance().TeamIdNameMap[Data.team1];
+                                    string team_name_stripped = new string(team_name.ToCharArray().Where(c =>
+                                    !Char.IsWhiteSpace(c)).ToArray());
+                                    string path = $"logos/{team_name_stripped}.png";
+                                    <FigureImage Source="@path" />
+                                }
+                            </Figure>
+                        </Div>
+                    </Column>
+                    <Column TextAlignment="TextAlignment.Center">
+                        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                            <Heading Size="HeadingSize.Is4">@Data.team1_wins - @Data.team2_wins</Heading>
+                        </Div>
+                    </Column>
+                    <Column TextAlignment="TextAlignment.Center">
+                        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                            <Figure Size="FigureSize.Is48x48">
+                                @{
+                                    string team_name = Api.Teams.Instance().TeamIdNameMap[Data.team2];
+                                    string team_name_stripped = new string(team_name.ToCharArray().Where(c =>
+                                    !Char.IsWhiteSpace(c)).ToArray());
+                                    string path = $"logos/{team_name_stripped}.png";
+                                    <FigureImage Source="@path" />
+                                }
+                            </Figure>
+                        </Div>
+                    </Column>
+                }
+                else
+                {
+                    <Column TextAlignment="TextAlignment.Center">
+                        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                            <Figure Size="FigureSize.Is48x48">
+                            </Figure>
+                        </Div>
+                    </Column>
+                    <Column TextAlignment="TextAlignment.Center">
+                        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                            <Heading Size="HeadingSize.Is4">0 - 0</Heading>
+                        </Div>
+                    </Column>
+                    <Column TextAlignment="TextAlignment.Center">
+                        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                            <Figure Size="FigureSize.Is48x48">
+                            </Figure>
+                        </Div>
+                    </Column>
+                }
+            </Row>
+        </CardBody>
+    </Card>
+</div>
 
 @code {
     [Parameter] public string Text { get; set; }
     [Parameter] public Data.Matchup Data { get; set; }
-
     private string Team1Name { get; set; }
     private string Team2Name { get; set; }
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
+    }
+
+    private void DisplayGameStats()
+    {
+        if (Data != null)
+            Console.WriteLine(Data.series_name);
     }
 }
