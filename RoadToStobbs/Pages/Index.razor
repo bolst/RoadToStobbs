@@ -11,8 +11,9 @@
     @{
             const int MAX_ROUNDS = 6;
             int currentRound = north_matchups.Count();
+            int zoomLevel = 0;
 
-            for (int r = 0; r < currentRound; r++)
+            for (int r = zoomLevel; r < currentRound; r++)
             {
                 int r0 = r;
                 <Column>
@@ -67,7 +68,7 @@
                 </Column>
             }
 
-            for (int r = 0; r < currentRound; r++)
+            for (int r = zoomLevel; r < currentRound; r++)
             {
                 int r0 = r;
                 <Column>
