@@ -545,7 +545,7 @@
                         "game_status": "Final",
                         "date_time": "2024-02-27 20:00:00",
                         "if_necessary": "0",
-                        "game_notes": "SUSPENSIONS:\nSCHOMBERG\nWesley O'Hara - 1 of 2"
+                        "game_notes": "SUSPENSIONS:\nSCHOMBERG\nWesley O\u0027Hara - 1 of 2"
                     },
                     {
                         "game_id": "13159",
@@ -1674,8 +1674,8 @@
                         "home_goal_count": "6",
                         "visiting_team": "46",
                         "visiting_goal_count": "1",
-                        "status": "2",
-                        "game_status": "In Progress",
+                        "status": "4",
+                        "game_status": "Final",
                         "date_time": "2024-02-29 20:30:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -1754,7 +1754,7 @@
                     }
                 ],
                 "team1_wins": 0,
-                "team2_wins": 0,
+                "team2_wins": 1,
                 "ties": 0
             },
             {
@@ -1776,9 +1776,9 @@
                         "home_team": "50",
                         "home_goal_count": "0",
                         "visiting_team": "49",
-                        "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "visiting_goal_count": "5",
+                        "status": "4",
+                        "game_status": "Final",
                         "date_time": "2024-02-29 19:30:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -1856,7 +1856,7 @@
                         "game_notes": ""
                     }
                 ],
-                "team1_wins": 0,
+                "team1_wins": 1,
                 "team2_wins": 0,
                 "ties": 0
             },

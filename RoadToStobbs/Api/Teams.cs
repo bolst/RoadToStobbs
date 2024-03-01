@@ -20,7 +20,7 @@ namespace RoadToStobbs.Api
 
         private Dictionary<string, string>? GetTeamIdNameMap()
         {
-            string fileContent = File.ReadAllText("Api/team_data.json");
+            string fileContent = File.ReadAllText("team_data.json");
             List<Data.Teams>? data = JsonSerializer.Deserialize<List<Data.Teams>>(fileContent);
 
             if (data == null) return null;

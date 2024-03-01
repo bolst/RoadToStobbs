@@ -1,14 +1,19 @@
 using Blazorise;
 using Blazorise.Bootstrap5;
 using Blazorise.Icons.FontAwesome;
+using Microsoft.AspNetCore.Mvc;
+using RoadToStobbs.Api;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// fetch game data
+await RoadToStobbs.Api.Matchups.Instance().FetchData();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
-AddBlazorise( builder.Services );
+AddBlazorise(builder.Services);
 
 var app = builder.Build();
 
