@@ -35,7 +35,7 @@
                             <Column>
                                 <Figure Size="FigureSize.Is128x128">
                                     <FigureImage Source="@Api.AbstractPlayer.GetHeadshotSource(Stats.row.player_id)"
-                                        AlternateText="" Position="Position.Relative.Top.Is50.Translate.MiddleY" Rounded />
+                                        AlternateText=""  Rounded />
                                     @{
                                         string teamName = Api.Teams.Instance().TeamIdNameMap[@Stats.prop.team_code.teamLink];
                                     }
@@ -97,7 +97,7 @@ else if (GoalieStats != null)
                             <Column>
                                 <Figure Size="FigureSize.Is128x128">
                                     <FigureImage Source="@Api.AbstractPlayer.GetHeadshotSource(GoalieStats.row.player_id)"
-                                        AlternateText="" Position="Position.Relative.Top.Is50.Translate.MiddleY" Rounded />
+                                        AlternateText="" Rounded />
                                     @{
                                         string teamName = Api.Teams.Instance().TeamIdNameMap[@GoalieStats.prop.team_code.teamLink];
                                     }

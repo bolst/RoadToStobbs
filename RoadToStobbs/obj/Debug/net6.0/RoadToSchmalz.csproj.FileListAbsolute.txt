@@ -1,0 +1,9 @@
+C:\Users\Nic\git\RoadToStobbs\RoadToStobbs\obj\Debug\net6.0\RoadToSchmalz.csproj.AssemblyReference.cache
+C:\Users\Nic\git\RoadToStobbs\RoadToStobbs\obj\Debug\net6.0\RoadToSchmalz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nic\git\RoadToStobbs\RoadToStobbs\obj\Debug\net6.0\RoadToSchmalz.AssemblyInfoInputs.cache
+C:\Users\Nic\git\RoadToStobbs\RoadToStobbs\obj\Debug\net6.0\RoadToSchmalz.AssemblyInfo.cs
+C:\Users\Nic\git\RoadToStobbs\RoadToStobbs\obj\Debug\net6.0\RoadToSchmalz.csproj.CoreCompileInputs.cache
+C:\Users\Nic\git\RoadToStobbs\RoadToStobbs\obj\Debug\net6.0\RoadToSchmalz.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Nic\git\RoadToStobbs\RoadToStobbs\obj\Debug\net6.0\RoadToSchmalz.RazorAssemblyInfo.cache
+C:\Users\Nic\git\RoadToStobbs\RoadToStobbs\obj\Debug\net6.0\RoadToSchmalz.RazorAssemblyInfo.cs
+C:\Users\Nic\git\RoadToStobbs\RoadToStobbs\obj\Debug\net6.0\RoadToSchmalz.sourcelink.json

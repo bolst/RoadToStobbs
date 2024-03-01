@@ -1,102 +1,86 @@
 ﻿@using Blazorise.Localization
+@inject IJSRuntime JSRuntime
 
-<Bar Visible=false Breakpoint="Breakpoint.Desktop" Background="Background.Light">
-    <BarBrand>
-        <BarItem>
-            <BarLink To="" TextColor="TextColor.Primary" TextSize="TextSize.Heading2">
-                <Row>
-                    <Column ColumnSize="ColumnSize.Is1.OnTablet.Is3.OnMobile">
-                        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                            <Image Source="logos/playoffs.png" Fluid />
-                        </Div>
-                    </Column>
-                    <Column>
-                        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                            2024 PJHL PLAYOFFS
-                        </Div>
-                    </Column>
-                </Row>
-            </BarLink>
-        </BarItem>
-    </BarBrand>
-    <BarMenu>
-        <BarStart>
+@if(IsMobile)
+{
+    <Bar Background="Background.Light">
+        <BarBrand>
             <BarItem>
-                <BarLink TextColor="TextColor.Primary" To="/topplayers">TOP PLAYERS
-                </BarLink>
-            </BarItem>
+                <BarLink To="" TextColor="TextColor.Primary" TextSize="TextSize.Heading2">
+                    <Row>
+                        <Column ColumnSize="ColumnSize.Is1.OnTablet.Is3.OnMobile">
+                            <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                                <Image Source="logos/playoffs.png" Fluid />
+                             </Div>
+                         </Column>
+                         <Column>
+                             <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                                 2024 PJHL PLAYOFFS
+                             </Div>
+                         </Column>
+                     </Row>
+                 </BarLink>
+             </BarItem>
+         </BarBrand>
+         <BarMenu>
+             <BarStart>
+                 <BarItem Margin="Margin.IsAuto">
+                     <BarLink TextColor="TextColor.Primary" TextWeight="TextWeight.Bold" To="/topplayers">
+                         TOP PLAYERS
+                     </BarLink>
+                 </BarItem>
+                 <BarItem Margin="Margin.IsAuto">
+                     <BarLink TextColor="TextColor.Primary" TextWeight="TextWeight.Bold" To="/topgoalies">
+                         TOP GOALIES
+                     </BarLink>
+                 </BarItem>
+             </BarStart>
+         </BarMenu>
+     </Bar>
+}
+else
+{
+    <Bar Visible=false Breakpoint="Breakpoint.Desktop" Background="Background.Light">
+        <BarBrand>
             <BarItem>
-                <BarLink TextColor="TextColor.Primary" To="/topgoalies">TOP GOALIES
-                </BarLink>
-            </BarItem>
-        </BarStart>
-        @*
-        <BarItem>
-        <BarLink To="https://blazorise.com/docs/">Documentation</BarLink>
-        </BarItem>
-        <BarItem>
-        <BarDropdown>
-        <BarDropdownToggle>More</BarDropdownToggle>
-        <BarDropdownMenu>
-        <BarDropdownItem To="https://blazorise.com/docs/start/">
-        Quick-Start Guide
-        </BarDropdownItem>
-        <BarDropdownDivider />
-        <BarDropdownItem To="https://blazorise.com/docs/usage/">
-        Usage
-        </BarDropdownItem>
-        </BarDropdownMenu>
-        </BarDropdown>
-        </BarItem>
-        <BarItem>
-        <BarDropdown>
-        <BarDropdownToggle>Layout</BarDropdownToggle>
-        <BarDropdownMenu>
-        </BarDropdownMenu>
-        </BarDropdown>
-        </BarItem>
+                <BarLink To="" TextColor="TextColor.Primary" TextSize="TextSize.Heading2">
+                    <Row>
+                        <Column ColumnSize="ColumnSize.Is1.OnTablet.Is3.OnMobile">
+                            <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                                <Image Source="logos/playoffs.png" Fluid />
+                             </Div>
+                         </Column>
+                         <Column>
+                             <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                                 2024 PJHL PLAYOFFS
+                             </Div>
+                         </Column>
+                     </Row>
+                 </BarLink>
+             </BarItem>
+         </BarBrand>
+         <BarMenu>
+             <BarStart>
+                 <BarItem>
+                     <BarLink TextColor="TextColor.Primary" TextWeight="TextWeight.Bold"  To="/topplayers">
+                         TOP PLAYERS
+                     </BarLink>
+                 </BarItem>
+                 <BarItem>
+                     <BarLink TextColor="TextColor.Primary" TextWeight="TextWeight.Bold" To="/topgoalies">
+                         TOP GOALIES
+                     </BarLink>
+                 </BarItem>
+             </BarStart>
+         </BarMenu>
+     </Bar>
+}
 
-        <BarEnd>
-        <BarItem>
-        <BarDropdown RightAligned>
-        <BarDropdownToggle>
-        <Icon Name="IconName.Language" />
-        </BarDropdownToggle>
-        </BarDropdown>
-        </BarItem>
-        <BarItem>
-        <BarDropdown RightAligned>
-        <BarDropdownToggle>
-        <Icon Name="IconName.Tint" /> Theme
-        </BarDropdownToggle>
-        <BarDropdownMenu Style="padding: 15px; min-width:550px;">
-        <Row>
-        <Column Margin="Margin.Is2.FromBottom">
-        <Field>
-        </Field>
-        </Column>
-        </Row>
-        <Row>
-        <Column Margin="Margin.Is2.FromBottom">
-        <Field>
-        </Field>
-        <Field>
-        </Field>
-        </Column>
-        </Row>
-        <Row>
-        <Column>
-        <Container Fluid>
-        </Container>
-        </Column>
-        </Row>
-        </BarDropdownMenu>
-        </BarDropdown>
-        </BarItem>
-        <BarItem>
-        <BarLink To="https://github.com/Megabit/Blazorise">GitHub</BarLink>
-        </BarItem>
-        </BarEnd>
-        *@
-    </BarMenu>
-</Bar>
+ @code{
+    private bool IsMobile { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        IsMobile = await JSRuntime.InvokeAsync<bool>("isDevice");
+    }
+}
