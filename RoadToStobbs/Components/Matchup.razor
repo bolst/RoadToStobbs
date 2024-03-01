@@ -43,14 +43,14 @@
                         <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
                             <Figure Size="FigureSize.Is32x32">
                             </Figure>
-                            <Text TextSize="TextSize.ExtraSmall">0</Text>
+                            <Text TextSize="TextSize.ExtraSmall"></Text>
                         </Div>
                     </Column>
                     <Column TextAlignment="TextAlignment.Center">
                         <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
                             <Figure Size="FigureSize.Is32x32">
                             </Figure>
-                            <Text TextSize="TextSize.ExtraSmall">0</Text>
+                            <Text TextSize="TextSize.ExtraSmall"></Text>
                         </Div>
                     </Column>
                 }
@@ -74,7 +74,6 @@
     {
         if (Data != null)
         {
-            Console.WriteLine(Data.series_name);
             navManager.NavigateTo($"/series?sletter={Data.series_letter}");
         }
     }

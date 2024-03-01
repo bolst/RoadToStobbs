@@ -17,7 +17,7 @@ using System.Reflection;
     " a component library built on top of Blazor and CSS frameworks like Bootstrap, T" +
     "ailwind, Bulma and Material.\n\t\t")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.3.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.3+d96449b44f7d292724143cc2d7ba4305137a3ee6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.3+274ceb89d0639e060d34d7308786f5cd7cfa5088")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoadToStobbs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoadToStobbs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.3.0.0")]
