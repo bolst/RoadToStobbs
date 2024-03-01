@@ -42,6 +42,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/nic/git/RoadToStobbs/RoadToStobbs/Pages/Leaders/Top Goalies/TopGoalies.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGVhZGVycy9Ub3AgR29hbGllcy9Ub3BHb2FsaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nic/git/RoadToStobbs/RoadToStobbs/Pages/Leaders/Top Players/TopPlayers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGVhZGVycy9Ub3AgUGxheWVycy9Ub3BQbGF5ZXJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/nic/git/RoadToStobbs/RoadToStobbs/Pages/Series/Game.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VyaWVzL0dhbWUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

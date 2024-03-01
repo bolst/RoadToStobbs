@@ -112,6 +112,7 @@ namespace RoadToStobbs.Api
             }
             catch (Exception exc)
             {
+                Console.WriteLine("Error in fetching matchup data");
                 Console.WriteLine(exc + "\n\n");
             }
         }

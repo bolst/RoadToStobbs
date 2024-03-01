@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using RoadToStobbs.Components
 @using RoadToStobbs.Api
+@inject IJSRuntime JSRuntime
 
 @if (north_matchups != null
 && south_matchups != null
@@ -32,17 +33,20 @@
                 </Column>
             }
 
-            for (int r = currentRound; r < MAX_ROUNDS - 1; r++)
+            @if (!IsMobile)
             {
-                int r0 = r;
-                <Column>
-                    <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                        @for (int i = 0; i < Math.Pow(2, MAX_ROUNDS - r0 - 2); i++)
-                        {
-                            <Matchup />
-                        }
-                    </Div>
-                </Column>
+                for (int r = currentRound; r < MAX_ROUNDS - 1; r++)
+                {
+                    int r0 = r;
+                    <Column>
+                        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                            @for (int i = 0; i < Math.Pow(2, MAX_ROUNDS - r0 - 2); i++)
+                            {
+                                <Matchup />
+                            }
+                        </Div>
+                    </Column>
+                }
             }
         }
 
@@ -54,18 +58,20 @@
         </Column>
 
         @{
-
-            for (int r = MAX_ROUNDS - 2; r >= currentRound; r--)
+            if (!IsMobile)
             {
-                int r0 = r;
-                <Column>
-                    <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                        @for (int i = 0; i < Math.Pow(2, MAX_ROUNDS - r0 - 2); i++)
-                        {
-                            <Matchup />
-                        }
-                    </Div>
-                </Column>
+                for (int r = MAX_ROUNDS - 2; r >= currentRound; r--)
+                {
+                    int r0 = r;
+                    <Column>
+                        <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                            @for (int i = 0; i < Math.Pow(2, MAX_ROUNDS - r0 - 2); i++)
+                            {
+                                <Matchup />
+                            }
+                        </Div>
+                    </Column>
+                }
             }
 
             for (int r = zoomLevel; r < currentRound; r++)
@@ -98,9 +104,11 @@
     private List<Data.Matchups>? south_matchups { get; set; } = null;
     private List<Data.Matchups>? matchups { get; set; } = null;
 
+    private bool IsMobile { get; set; } = false;
+
     protected override async Task OnInitializedAsync()
     {
-        await Task.Delay(1);
+        IsMobile = await JSRuntime.InvokeAsync<bool>("isDevice");
     }
 
     protected override void OnInitialized()

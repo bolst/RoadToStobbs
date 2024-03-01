@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // fetch game data
 await RoadToStobbs.Api.Matchups.Instance().FetchData();
+await RoadToStobbs.Api.Players.Instance().FetchData();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

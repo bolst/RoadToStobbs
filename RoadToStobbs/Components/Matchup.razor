@@ -1,5 +1,6 @@
 @namespace RoadToStobbs.Components
 @inject NavigationManager navManager
+@inject IJSRuntime JSRuntime
 
 <div @onclick="@(e => DisplayGameStats())" style="cursor: pointer">
     <Card>
@@ -10,7 +11,7 @@
 
                     <Column TextAlignment="TextAlignment.Center">
                         <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                            <Figure Size="FigureSize.Is32x32">
+                            <Figure Size="@logoSize">
                                 @{
                                     string team_name = Api.Teams.Instance().TeamIdNameMap[Data.team1];
                                     string team_name_stripped = new string(team_name.ToCharArray().Where(c =>
@@ -24,7 +25,7 @@
                     </Column>
                     <Column TextAlignment="TextAlignment.Center">
                         <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                            <Figure Size="FigureSize.Is32x32">
+                            <Figure Size="@logoSize">
                                 @{
                                     string team_name = Api.Teams.Instance().TeamIdNameMap[Data.team2];
                                     string team_name_stripped = new string(team_name.ToCharArray().Where(c =>
@@ -41,14 +42,14 @@
                 {
                     <Column TextAlignment="TextAlignment.Center">
                         <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                            <Figure Size="FigureSize.Is32x32">
+                            <Figure Size="@logoSize">
                             </Figure>
                             <Text TextSize="TextSize.ExtraSmall"></Text>
                         </Div>
                     </Column>
                     <Column TextAlignment="TextAlignment.Center">
                         <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                            <Figure Size="FigureSize.Is32x32">
+                            <Figure Size="@logoSize">
                             </Figure>
                             <Text TextSize="TextSize.ExtraSmall"></Text>
                         </Div>
@@ -65,8 +66,16 @@
     private string Team1Name { get; set; }
     private string Team2Name { get; set; }
 
-    protected override void OnInitialized()
+    private bool IsMobile { get; set; } = false;
+
+    private FigureSize logoSize = FigureSize.Is32x32;
+
+    protected override async Task OnInitializedAsync()
     {
+        IsMobile = await JSRuntime.InvokeAsync<bool>("isDevice");
+
+        logoSize = IsMobile ? FigureSize.Is16x16 : FigureSize.Is32x32;
+
         base.OnInitialized();
     }
 
