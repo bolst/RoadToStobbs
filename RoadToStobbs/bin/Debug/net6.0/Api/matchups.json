@@ -229,11 +229,11 @@
                     {
                         "game_id": "13242",
                         "home_team": "27",
-                        "home_goal_count": "0",
+                        "home_goal_count": "2",
                         "visiting_team": "25",
-                        "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "visiting_goal_count": "9",
+                        "status": "4",
+                        "game_status": "Final",
                         "date_time": "2024-02-29 20:00:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -311,7 +311,7 @@
                         "game_notes": ""
                     }
                 ],
-                "team1_wins": 0,
+                "team1_wins": 1,
                 "team2_wins": 0,
                 "ties": 0
             },
@@ -744,11 +744,11 @@
                     {
                         "game_id": "13274",
                         "home_team": "15",
-                        "home_goal_count": "0",
+                        "home_goal_count": "4",
                         "visiting_team": "20",
-                        "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "visiting_goal_count": "3",
+                        "status": "4",
+                        "game_status": "Final OT1",
                         "date_time": "2024-02-29 20:00:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -826,7 +826,7 @@
                         "game_notes": ""
                     }
                 ],
-                "team1_wins": 0,
+                "team1_wins": 1,
                 "team2_wins": 0,
                 "ties": 0
             },
@@ -847,11 +847,11 @@
                     {
                         "game_id": "13130",
                         "home_team": "2",
-                        "home_goal_count": "0",
+                        "home_goal_count": "8",
                         "visiting_team": "1",
                         "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "status": "4",
+                        "game_status": "Final",
                         "date_time": "2024-02-29 19:25:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -929,7 +929,7 @@
                         "game_notes": ""
                     }
                 ],
-                "team1_wins": 0,
+                "team1_wins": 1,
                 "team2_wins": 0,
                 "ties": 0
             },
@@ -1168,11 +1168,11 @@
                     {
                         "game_id": "13296",
                         "home_team": "9",
-                        "home_goal_count": "0",
+                        "home_goal_count": "2",
                         "visiting_team": "8",
-                        "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "visiting_goal_count": "1",
+                        "status": "4",
+                        "game_status": "Final OT1",
                         "date_time": "2024-02-29 19:30:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -1239,7 +1239,7 @@
                     }
                 ],
                 "team1_wins": 1,
-                "team2_wins": 0,
+                "team2_wins": 1,
                 "ties": 0
             },
             {
@@ -1362,11 +1362,11 @@
                     {
                         "game_id": "13186",
                         "home_team": "58",
-                        "home_goal_count": "0",
+                        "home_goal_count": "7",
                         "visiting_team": "61",
-                        "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "visiting_goal_count": "4",
+                        "status": "4",
+                        "game_status": "Final",
                         "date_time": "2024-02-29 19:30:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -1444,7 +1444,7 @@
                         "game_notes": ""
                     }
                 ],
-                "team1_wins": 0,
+                "team1_wins": 1,
                 "team2_wins": 0,
                 "ties": 0
             },
@@ -1477,11 +1477,11 @@
                     {
                         "game_id": "13194",
                         "home_team": "60",
-                        "home_goal_count": "0",
+                        "home_goal_count": "2",
                         "visiting_team": "56",
-                        "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "visiting_goal_count": "3",
+                        "status": "4",
+                        "game_status": "Final",
                         "date_time": "2024-02-29 19:30:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -1548,7 +1548,7 @@
                     }
                 ],
                 "team1_wins": 1,
-                "team2_wins": 0,
+                "team2_wins": 1,
                 "ties": 0
             },
             {
@@ -1671,11 +1671,11 @@
                     {
                         "game_id": "13165",
                         "home_team": "59",
-                        "home_goal_count": "0",
+                        "home_goal_count": "6",
                         "visiting_team": "46",
-                        "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "visiting_goal_count": "1",
+                        "status": "2",
+                        "game_status": "In Progress",
                         "date_time": "2024-02-29 20:30:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -1992,11 +1992,11 @@
                     {
                         "game_id": "13222",
                         "home_team": "34",
-                        "home_goal_count": "0",
+                        "home_goal_count": "2",
                         "visiting_team": "42",
-                        "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "visiting_goal_count": "6",
+                        "status": "4",
+                        "game_status": "Final",
                         "date_time": "2024-02-29 19:30:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -2062,7 +2062,7 @@
                         "game_notes": ""
                     }
                 ],
-                "team1_wins": 1,
+                "team1_wins": 2,
                 "team2_wins": 0,
                 "ties": 0
             },
@@ -2598,11 +2598,11 @@
                     {
                         "game_id": "13267",
                         "home_team": "36",
-                        "home_goal_count": "0",
+                        "home_goal_count": "5",
                         "visiting_team": "31",
-                        "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "visiting_goal_count": "3",
+                        "status": "4",
+                        "game_status": "Final",
                         "date_time": "2024-02-29 19:00:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -2680,7 +2680,7 @@
                         "game_notes": ""
                     }
                 ],
-                "team1_wins": 0,
+                "team1_wins": 1,
                 "team2_wins": 0,
                 "ties": 0
             },
@@ -2715,9 +2715,9 @@
                         "home_team": "37",
                         "home_goal_count": "0",
                         "visiting_team": "29",
-                        "visiting_goal_count": "0",
-                        "status": "1",
-                        "game_status": "Pre-Game",
+                        "visiting_goal_count": "7",
+                        "status": "4",
+                        "game_status": "Final",
                         "date_time": "2024-02-29 20:00:00",
                         "if_necessary": "0",
                         "game_notes": ""
@@ -2783,7 +2783,7 @@
                         "game_notes": ""
                     }
                 ],
-                "team1_wins": 1,
+                "team1_wins": 2,
                 "team2_wins": 0,
                 "ties": 0
             }

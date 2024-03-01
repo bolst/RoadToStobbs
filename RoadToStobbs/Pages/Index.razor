@@ -2,51 +2,99 @@
 @using RoadToStobbs.Components
 @using RoadToStobbs.Api
 
-<Row>
-    @if (matchups != null)
-    {
-        const int MAX_ROUNDS = 6;
-        int currentRound = matchups.Count();
+@if (north_matchups != null
+&& south_matchups != null
+&& west_matchups != null
+&& east_matchups != null)
+{
+    <Row>
+    @{
+            const int MAX_ROUNDS = 6;
+            int currentRound = north_matchups.Count();
 
-        foreach (Data.Matchups round in matchups)
-        {
-            <Column>
-                <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                    @foreach (Data.Matchup matchup in round.matchups)
-                    {
-                        var _matchup = matchup;
-                        <Matchup Data="@_matchup" />
-                    }
-                </Div>
-            </Column>
+            for (int r = 0; r < currentRound; r++)
+            {
+                int r0 = r;
+                <Column>
+                    <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                        @foreach (Data.Matchup matchup in north_matchups[r0].matchups)
+                        {
+                            var _matchup = matchup;
+                            <Matchup Data="@_matchup" />
+                        }
+                        @foreach (Data.Matchup matchup in south_matchups[r0].matchups)
+                        {
+                            var _matchup = matchup;
+                            <Matchup Data="@_matchup" />
+                        }
+                    </Div>
+                </Column>
+            }
+
+            for (int r = currentRound; r < MAX_ROUNDS - 1; r++)
+            {
+                int r0 = r;
+                <Column>
+                    <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                        @for (int i = 0; i < Math.Pow(2, MAX_ROUNDS - r0 - 2); i++)
+                        {
+                            <Matchup />
+                        }
+                    </Div>
+                </Column>
+            }
         }
 
-        for (int i = currentRound; i <= MAX_ROUNDS - currentRound + 1; i++)
-        {
-            var i0 = i;
-            if (i0 == 1) continue;
-
-            <Column>
-                <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
-                    @for (int j = 0; j < Math.Pow(2, MAX_ROUNDS - i0); j++)
-                    {
-                        string idx = j.ToString();
-                        <Matchup />
-                    }
-                </Div>
-            </Column>
-        }
 
         <Column>
             <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
                 <Image Source="logos/playoffs.png" Width="Width.Is100" />
             </Div>
         </Column>
-    }
-</Row>
+
+        @{
+
+            for (int r = MAX_ROUNDS - 2; r >= currentRound; r--)
+            {
+                int r0 = r;
+                <Column>
+                    <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                        @for (int i = 0; i < Math.Pow(2, MAX_ROUNDS - r0 - 2); i++)
+                        {
+                            <Matchup />
+                        }
+                    </Div>
+                </Column>
+            }
+
+            for (int r = 0; r < currentRound; r++)
+            {
+                int r0 = r;
+                <Column>
+                    <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                        @foreach (Data.Matchup matchup in east_matchups[r0].matchups)
+                        {
+                            var _matchup = matchup;
+                            <Matchup Data="@_matchup" />
+                        }
+                        @foreach (Data.Matchup matchup in west_matchups[r0].matchups)
+                        {
+                            var _matchup = matchup;
+                            <Matchup Data="@_matchup" />
+                        }
+                    </Div>
+                </Column>
+            }
+        }
+    </Row>
+}
 
 @code {
 
+    private List<Data.Matchups>? north_matchups { get; set; } = null;
+    private List<Data.Matchups>? east_matchups { get; set; } = null;
+    private List<Data.Matchups>? west_matchups { get; set; } = null;
+    private List<Data.Matchups>? south_matchups { get; set; } = null;
     private List<Data.Matchups>? matchups { get; set; } = null;
 
     protected override async Task OnInitializedAsync()
@@ -56,7 +104,18 @@
 
     protected override void OnInitialized()
     {
-        matchups = Matchups.Instance().GetMatchups();
+        north_matchups = Matchups.Instance().GetMatchups(Data.Divisions.DIVISION.CARRUTHERS);
+        north_matchups[0].matchups.AddRange(Matchups.Instance().GetMatchups(Data.Divisions.DIVISION.POLLOCK)[0].matchups);
+
+        east_matchups = Matchups.Instance().GetMatchups(Data.Divisions.DIVISION.ORR);
+        east_matchups[0].matchups.AddRange(Matchups.Instance().GetMatchups(Data.Divisions.DIVISION.TOD)[0].matchups);
+
+        west_matchups = Matchups.Instance().GetMatchups(Data.Divisions.DIVISION.STOBBS);
+        west_matchups[0].matchups.AddRange(Matchups.Instance().GetMatchups(Data.Divisions.DIVISION.YECK)[0].matchups);
+
+        south_matchups = Matchups.Instance().GetMatchups(Data.Divisions.DIVISION.BLOOMFIELD);
+        south_matchups[0].matchups.AddRange(Matchups.Instance().GetMatchups(Data.Divisions.DIVISION.DOHERTY)[0].matchups);
+
         base.OnInitialized();
     }
 }

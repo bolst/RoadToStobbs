@@ -1,0 +1,8 @@
+@if (GameData != null)
+{
+    <Text>@GameData.home_goal_count - @GameData.visiting_goal_count</Text>
+}
+
+@code {
+    [Parameter] public Data.Game GameData { get; set; } = null;
+}
