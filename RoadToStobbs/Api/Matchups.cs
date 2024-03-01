@@ -16,7 +16,7 @@ namespace RoadToStobbs.Api
 
         public List<Data.Matchups>? GetMatchups(Divisions.DIVISION division = Divisions.DIVISION.NULL)
         {
-            string fileContent = File.ReadAllText("matchups.json");
+            string fileContent = File.ReadAllText("dat/matchups.json");
             List<Data.Matchups>? data = JsonSerializer.Deserialize<List<Data.Matchups>>(fileContent);
             data = FilterByDivision(data, division);
             return data;
@@ -95,14 +95,14 @@ namespace RoadToStobbs.Api
                     {
                         teamList.Add(team.Value);
                     }
-                    await using (var teamFile = System.IO.File.CreateText("team_data.json"))
+                    await using (var teamFile = System.IO.File.CreateText("dat/team_data.json"))
                     {
                         await JsonSerializer.SerializeAsync(teamFile.BaseStream, teamList);
                     }
 
                     // Get matchups
                     var matchupsData = data.RootElement.GetProperty("SiteKit").GetProperty("Brackets").GetProperty("rounds");
-                    await using (var matchupsFile = System.IO.File.CreateText("matchups.json"))
+                    await using (var matchupsFile = System.IO.File.CreateText("dat/matchups.json"))
                     {
                         await JsonSerializer.SerializeAsync(matchupsFile.BaseStream, matchupsData);
                     }

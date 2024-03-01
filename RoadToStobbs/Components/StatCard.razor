@@ -1,0 +1,157 @@
+@namespace RoadToStobbs.Components
+@inject NavigationManager navManager
+@inject IJSRuntime JSRuntime
+
+    <Row Width="@RowWidth" Margin="Margin.IsAuto">
+    @if (Stats != null)
+    {
+        <div @onclick="@(e => NavToPlayerProfile(Stats.row.player_id))" style="cursor: pointer">
+            <Card>
+                <CardBody TextAlignment="TextAlignment.Center">
+                    <Row RowColumns="@RowCols">
+                        @if(!IsMobile)
+                        {
+                            <Column></Column>
+                            <Column>
+                                <Figure Size="FigureSize.Is128x128">
+                                    <FigureImage Source="@Api.AbstractPlayer.GetHeadshotSource(Stats.row.player_id)"
+                                        AlternateText="" Position="Position.Relative.Top.Is50.Translate.MiddleY" Rounded />
+                                </Figure>
+                            </Column>
+                            <Column ColumnSize="ColumnSize.Is3">
+                                <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                                    <Heading Size="HeadingSize.Is4">
+                                        @Stats.row.name</Heading>
+                                    @{
+                                        string teamName = Api.Teams.Instance().TeamIdNameMap[@Stats.prop.team_code.teamLink];
+                                    }
+                                    <Heading Size="HeadingSize.Is6">
+                                        @teamName</Heading>
+                                </Div>
+                            </Column>
+                        }
+                        else
+                        {
+                            <Column>
+                                <Figure Size="FigureSize.Is128x128">
+                                    <FigureImage Source="@Api.AbstractPlayer.GetHeadshotSource(Stats.row.player_id)"
+                                        AlternateText="" Position="Position.Relative.Top.Is50.Translate.MiddleY" Rounded />
+                                    @{
+                                        string teamName = Api.Teams.Instance().TeamIdNameMap[@Stats.prop.team_code.teamLink];
+                                    }
+                                    <FigureCaption TextWeight="TextWeight.Bold" Padding="Padding.Is3.OnY">
+                                        @Stats.row.name</FigureCaption>
+                                    <FigureCaption>
+                                        @teamName</FigureCaption>
+                                </Figure>
+                            </Column>
+                        }
+                        <Column>
+                            <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                                <Heading Size="HeadingSize.Is5" TextWeight="TextWeight.Normal">Goals: @Stats.row.goals
+                                </Heading>
+                                <Heading Size="HeadingSize.Is5" TextWeight="TextWeight.Normal">Assists: @Stats.row.assists
+                                </Heading>
+                                <Heading Size="HeadingSize.Is5" TextWeight="TextWeight.Normal">Points: @Stats.row.points
+                                </Heading>
+                                <Heading Size="HeadingSize.Is5" TextWeight="TextWeight.Normal">PIM:
+                                    @Stats.row.penalty_minutes</Heading>
+                            </Div>
+                        </Column>
+
+                    </Row>
+                </CardBody>
+            </Card>
+        </div>
+}
+else if (GoalieStats != null)
+{
+        <div @onclick="@(e => NavToPlayerProfile(GoalieStats.row.player_id))" style="cursor: pointer">
+            <Card>
+                <CardBody TextAlignment="TextAlignment.Center">
+                    <Row>
+
+                        @if(!IsMobile)
+                        {
+                        <Column></Column>
+                        <Column>
+                            <Figure Size="FigureSize.Is128x128">
+                                <FigureImage Source="@Api.AbstractPlayer.GetHeadshotSource(GoalieStats.row.player_id)"
+                                    AlternateText="" Position="Position.Relative.Top.Is50.Translate.MiddleY" Rounded />
+                            </Figure>
+                        </Column>
+                        <Column ColumnSize="ColumnSize.Is3">
+                            <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                                <Heading Size="HeadingSize.Is4">
+                                    @GoalieStats.row.name</Heading>
+                                @{
+                                    string teamName = Api.Teams.Instance().TeamIdNameMap[@GoalieStats.prop.team_code.teamLink];
+                                }
+                                <Heading Size="HeadingSize.Is6">
+                                    @teamName</Heading>
+                            </Div>
+                        </Column>
+                        }
+                        else
+                        {
+                            <Column>
+                                <Figure Size="FigureSize.Is128x128">
+                                    <FigureImage Source="@Api.AbstractPlayer.GetHeadshotSource(GoalieStats.row.player_id)"
+                                        AlternateText="" Position="Position.Relative.Top.Is50.Translate.MiddleY" Rounded />
+                                    @{
+                                        string teamName = Api.Teams.Instance().TeamIdNameMap[@GoalieStats.prop.team_code.teamLink];
+                                    }
+                                    <FigureCaption TextWeight="TextWeight.Bold" Padding="Padding.Is3.OnY">
+                                        @GoalieStats.row.name</FigureCaption>
+                                    <FigureCaption>
+                                        @teamName</FigureCaption>
+                                </Figure>
+                            </Column>
+                        }
+                        <Column>
+                            <Div Position="Position.Relative.Top.Is50.Translate.MiddleY">
+                                <Heading Size="HeadingSize.Is5" TextWeight="TextWeight.Normal">GP: @GoalieStats.row.games_played
+                                </Heading>
+                                <Heading Size="HeadingSize.Is5" TextWeight="TextWeight.Normal">SV%: @GoalieStats.row.save_percentage
+                                </Heading>
+                                <Heading Size="HeadingSize.Is5" TextWeight="TextWeight.Normal">GAA: @GoalieStats.row.goals_against_average
+                                </Heading>
+                                <Heading Size="HeadingSize.Is5" TextWeight="TextWeight.Normal">Wins:
+                                    @GoalieStats.row.wins</Heading>
+                            </Div>
+                        </Column>
+
+                    </Row>
+                </CardBody>
+            </Card>
+        </div>
+}
+    </Row>
+
+@code {
+    [Parameter] public string Type { get; set; } = "Player";
+    [Parameter] public RoadToStobbs.Data.PlayerStats.PlayerStat Stats { get; set; } = null;
+    [Parameter] public RoadToStobbs.Data.GoalieStats.GoalieStat GoalieStats { get; set; } = null;
+
+    private IFluentSizing RowWidth = Width.Is50;
+    private IFluentRowColumns RowCols = RowColumns.Are6;
+
+    private bool IsMobile {get; set;} = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        IsMobile = await JSRuntime.InvokeAsync<bool>("isDevice");
+
+        if (IsMobile)
+        {
+            RowWidth = Width.Is100;
+            RowCols = RowColumns.Are2;
+        }
+
+    }
+
+    private void NavToPlayerProfile(string player_id)
+    {
+        navManager.NavigateTo($"https://www.thepjhl.ca/stats/player/{player_id}");
+    }
+}

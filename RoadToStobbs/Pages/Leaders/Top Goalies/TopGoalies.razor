@@ -1,1 +1,28 @@
 @page "/topgoalies"
+@namespace RoadToStobbs.Pages.Leaders
+@using RoadToStobbs.Data.GoalieStats
+@using RoadToStobbs.Components
+
+@if (GoalieData != null)
+{
+    <Row RowColumns="RowColumns.Are1">
+        <Column>
+            @foreach (GoalieStat ps in GoalieData)
+            {
+                GoalieStat playerStat = ps;
+                <Row Padding="Padding.Is2.OnY">
+                    <StatCard Type="Goalie" GoalieStats="@ps" />
+                </Row>
+            }
+        </Column>
+    </Row>
+}
+
+@code {
+
+    List<GoalieStat>? GoalieData { get; set; } = null;
+    protected override void OnInitialized()
+    {
+        GoalieData = RoadToStobbs.Api.Goalies.Instance().GetStats();
+    }
+}

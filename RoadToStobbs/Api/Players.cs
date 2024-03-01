@@ -1,10 +1,11 @@
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using RoadToStobbs.Data;
+using RoadToStobbs.Data.PlayerStats;
 
 namespace RoadToStobbs.Api
 {
-    public class Players
+    public class Players : AbstractPlayer
     {
         private static Players? instance = null;
         public Players() { }
@@ -12,6 +13,13 @@ namespace RoadToStobbs.Api
         {
             if (instance == null) instance = new Players();
             return instance;
+        }
+
+        public List<Data.PlayerStats.PlayerStat>? GetStats()
+        {
+            string fileContent = File.ReadAllText("dat/player_data.json");
+            List<Data.PlayerStats.PlayerStat> data = JsonSerializer.Deserialize<List<Data.PlayerStats.PlayerStat>>(fileContent);
+            return data;
         }
 
         public async Task FetchData()
@@ -36,7 +44,7 @@ namespace RoadToStobbs.Api
                     .EnumerateArray()
                     .ElementAt(0)
                     .GetProperty("data");
-                    await using (var playerDataFile = System.IO.File.CreateText("player_data.json"))
+                    await using (var playerDataFile = System.IO.File.CreateText("dat/player_data.json"))
                     {
                         await JsonSerializer.SerializeAsync(playerDataFile.BaseStream, playerData);
                     }

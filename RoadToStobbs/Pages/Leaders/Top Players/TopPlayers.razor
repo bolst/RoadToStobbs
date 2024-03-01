@@ -1,1 +1,28 @@
 @page "/topplayers"
+@namespace RoadToStobbs.Pages.Leaders
+@using RoadToStobbs.Data.PlayerStats
+@using RoadToStobbs.Components
+
+@if (PlayerData != null)
+{
+    <Row RowColumns="RowColumns.Are1">
+        <Column>
+            @foreach (PlayerStat ps in PlayerData)
+            {
+                PlayerStat playerStat = ps;
+                <Row Padding="Padding.Is2.OnY">
+                    <StatCard Type="Player" Stats="@ps" />
+                </Row>
+            }
+        </Column>
+    </Row>
+}
+
+@code {
+
+    List<PlayerStat>? PlayerData { get; set; } = null;
+    protected override void OnInitialized()
+    {
+        PlayerData = RoadToStobbs.Api.Players.Instance().GetStats();
+    }
+}
